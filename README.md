@@ -1,6 +1,6 @@
 # AI Voice Agent
 
-🔗 **Live App:** [Coming soon — will be updated after deployment](#)
+🔗 **Live App:** [https://ai-voice-agent-sf81.onrender.com](https://ai-voice-agent-sf81.onrender.com)
 
 ## About the App
 
