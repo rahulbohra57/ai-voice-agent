@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof -ti :8000)",
+      "Bash(lsof -p 50749 -p 92262)",
+      "Bash(ps -p 95744 96134 96136 -o pid,command)",
+      "Bash(ps -p 95744 96134 96136 -o pid -o command)",
+      "Bash(ps -p 95744,96134,96136 -O comm)",
+      "Bash(xargs ps -p)",
+      "Bash(lsof -i :8000)",
+      "Bash(pip install gTTS langdetect)",
+      "Bash(python -c \":*)",
+      "Bash(pip install groq)",
+      "Bash(pip install edge-tts)",
+      "Bash(/Users/chetan/Desktop/DSE_Projects/AI-Voice-Agent/.gitignore:*)"
+    ]
+  }
+}

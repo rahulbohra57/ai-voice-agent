@@ -1,0 +1,9 @@
+.env
+audio_output/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.mp3
+*.wav

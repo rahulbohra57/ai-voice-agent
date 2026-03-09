@@ -1,0 +1,12 @@
+.env
+.env.*
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyc
+.git/
+.gitignore
+audio_output/
+*.mp3
+*.wav
+.DS_Store

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Voice Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Screen 1: Voice Selection ── -->
+  <div id="screen-select" class="screen active">
+    <div class="greeting-section">
+      <div class="greeting-avatar">🤖</div>
+      <div class="greeting-bubble">
+        <p>Hello! Hope you're having a great day.</p>
+        <p>Please choose a voice agent to get started.</p>
+      </div>
+      <button id="play-greeting-btn" class="play-greeting-btn hidden">
+        ▶ Play Greeting
+      </button>
+    </div>
+    <h2 class="choose-label">Choose your Agent</h2>
+    <div id="voice-grid" class="voice-grid"></div>
+  </div>
+
+  <!-- ── Screen 2: Chat ── -->
+  <div id="screen-chat" class="screen">
+    <header class="header">
+      <button id="back-btn" class="back-btn" title="Change agent">←</button>
+      <div class="agent-info">
+        <span id="agent-name" class="agent-name">—</span>
+        <span id="agent-label" class="agent-label">—</span>
+      </div>
+      <span id="lang-badge" class="lang-badge">EN</span>
+    </header>
+
+    <main class="chat-wrapper">
+      <div id="chat-container" class="chat-container">
+        <div class="welcome-msg">
+          <p>Tap the mic to start the conversation</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="controls">
+      <div id="speaking-indicator" class="speaking-indicator hidden">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <button id="mic-btn" class="mic-btn" title="Start / Stop conversation">
+        <svg id="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="2" width="6" height="12" rx="3"/>
+          <path d="M5 10a7 7 0 0 0 14 0"/>
+          <line x1="12" y1="17" x2="12" y2="22"/>
+          <line x1="8" y1="22" x2="16" y2="22"/>
+        </svg>
+        <svg id="stop-icon" class="hidden" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="6" y="6" width="12" height="12" rx="2"/>
+        </svg>
+      </button>
+      <p id="status-text" class="status-text">Tap mic to start conversation</p>
+    </footer>
+  </div>
+
+  <!-- ── Mic permission modal ── -->
+  <div id="mic-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-icon">🎙️</div>
+      <h2>Microphone Access Needed</h2>
+      <p>This assistant needs your microphone to hear you speak.</p>
+      <div class="modal-steps">
+        <p>If your browser blocked it:</p>
+        <ol>
+          <li>Click the <strong>🔒 lock icon</strong> in the address bar</li>
+          <li>Set <strong>Microphone</strong> to <strong>Allow</strong></li>
+          <li>Reload the page and try again</li>
+        </ol>
+        <p class="modal-tip">Make sure you're using <strong>localhost:8000</strong></p>
+      </div>
+      <div class="modal-actions">
+        <button id="modal-retry-btn" class="modal-btn primary">Try Again</button>
+        <button id="modal-close-btn" class="modal-btn secondary">Dismiss</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
